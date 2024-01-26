@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tGD-vU-EwR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mal hecho-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerMal" customModule="BarraDeProgreso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-Kt-AfJ">
+                                <rect key="frame" x="20" y="447" width="374" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfS-KZ-he7">
+                                <rect key="frame" x="171.5" y="409" width="71" height="30"/>
+                                <state key="normal" title="Comenzar"/>
+                                <connections>
+                                    <action selector="comenzar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gu-tz-Nxa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBl-hy-5CY">
+                                <rect key="frame" x="188.5" y="457" width="37" height="30"/>
+                                <state key="normal" title="Parar"/>
+                                <connections>
+                                    <action selector="parar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rtc-M6-Hzo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barra MAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3q-81-Nxt">
+                                <rect key="frame" x="130" y="44" width="154" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OfS-KZ-he7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="95E-ES-RJv"/>
+                            <constraint firstItem="k3q-81-Nxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fjt-5j-ev5"/>
+                            <constraint firstItem="k3q-81-Nxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tmg-FG-hac"/>
+                            <constraint firstItem="uBl-hy-5CY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vuq-gi-Y6j"/>
+                            <constraint firstItem="Kw0-Kt-AfJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZRf-K6-51V"/>
+                            <constraint firstItem="Kw0-Kt-AfJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aUS-g1-qjZ"/>
+                            <constraint firstItem="Kw0-Kt-AfJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dhV-Fi-1Wp"/>
+                            <constraint firstItem="uBl-hy-5CY" firstAttribute="top" secondItem="Kw0-Kt-AfJ" secondAttribute="bottom" constant="8" id="qNd-X1-Irb"/>
+                            <constraint firstItem="Kw0-Kt-AfJ" firstAttribute="top" secondItem="OfS-KZ-he7" secondAttribute="bottom" constant="8" id="ylL-O2-PVB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mal hecho" image="x.square.fill" catalog="system" id="HEO-gC-4rJ"/>
+                    <connections>
+                        <outlet property="botonComenzar" destination="OfS-KZ-he7" id="ya5-mt-VVX"/>
+                        <outlet property="botonParar" destination="uBl-hy-5CY" id="Wy4-sz-sjl"/>
+                        <outlet property="progressBar" destination="Kw0-Kt-AfJ" id="xIg-Yd-mWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="-121"/>
+        </scene>
+        <!--Bien hecho-->
+        <scene sceneID="MJs-8B-ZN9">
+            <objects>
+                <viewController id="Bmr-3O-Gca" customClass="ViewControllerBien" customModule="BarraDeProgreso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9a-OW-4Of">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="seT-qc-vLi">
+                                <rect key="frame" x="20" y="447" width="374" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-YP-JG0">
+                                <rect key="frame" x="171.5" y="409" width="71" height="30"/>
+                                <state key="normal" title="Comenzar"/>
+                                <connections>
+                                    <action selector="comenzar:" destination="Bmr-3O-Gca" eventType="touchUpInside" id="85F-as-L92"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zx-NY-Ik3">
+                                <rect key="frame" x="188.5" y="457" width="37" height="30"/>
+                                <state key="normal" title="Parar"/>
+                                <connections>
+                                    <action selector="parar:" destination="Bmr-3O-Gca" eventType="touchUpInside" id="SHJ-4E-8eY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barra BIEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ls-qt-uWf">
+                                <rect key="frame" x="128.5" y="44" width="157" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="seT-qc-vLi" firstAttribute="leading" secondItem="W9a-OW-4Of" secondAttribute="leadingMargin" id="6mO-Cc-mzf"/>
+                            <constraint firstItem="seT-qc-vLi" firstAttribute="trailing" secondItem="W9a-OW-4Of" secondAttribute="trailingMargin" id="M9e-0E-tBf"/>
+                            <constraint firstItem="0zx-NY-Ik3" firstAttribute="top" secondItem="seT-qc-vLi" secondAttribute="bottom" constant="8" id="QDx-4E-bnL"/>
+                            <constraint firstItem="seT-qc-vLi" firstAttribute="top" secondItem="Cd8-YP-JG0" secondAttribute="bottom" constant="8" id="WEM-zr-bBY"/>
+                            <constraint firstItem="Cd8-YP-JG0" firstAttribute="centerX" secondItem="W9a-OW-4Of" secondAttribute="centerX" id="cUv-Zn-cY0"/>
+                            <constraint firstItem="seT-qc-vLi" firstAttribute="centerY" secondItem="W9a-OW-4Of" secondAttribute="centerY" id="drk-pH-h2m"/>
+                            <constraint firstItem="8Ls-qt-uWf" firstAttribute="centerX" secondItem="W9a-OW-4Of" secondAttribute="centerX" id="hj4-2e-ioN"/>
+                            <constraint firstItem="8Ls-qt-uWf" firstAttribute="top" secondItem="3wR-ex-Sgx" secondAttribute="top" id="pn3-M8-t7s"/>
+                            <constraint firstItem="0zx-NY-Ik3" firstAttribute="centerX" secondItem="W9a-OW-4Of" secondAttribute="centerX" id="qDE-Vw-10w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3wR-ex-Sgx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bien hecho" image="v.square.fill" catalog="system" id="74r-iO-2tM"/>
+                    <connections>
+                        <outlet property="botonComenzar" destination="Cd8-YP-JG0" id="aoM-og-Dvf"/>
+                        <outlet property="botonParar" destination="0zx-NY-Ik3" id="POk-9J-BlD"/>
+                        <outlet property="progressBar" destination="seT-qc-vLi" id="WeG-mv-sJc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQK-jc-7E6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="561"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JJL-Mv-fWS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tGD-vU-EwR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ySb-oI-WsS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eWt-fe-QrT"/>
+                        <segue destination="Bmr-3O-Gca" kind="relationship" relationship="viewControllers" id="S0c-PB-z5d"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ra2-E7-0ZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="v.square.fill" catalog="system" width="128" height="114"/>
+        <image name="x.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
